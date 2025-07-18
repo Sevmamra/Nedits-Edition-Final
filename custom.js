@@ -35,6 +35,10 @@ document.addEventListener('DOMContentLoaded', function(){
   setInterval(nextBg, 3000);
 })();
 
+// ============== EXPLORE BUTTON FLOATING ANIMATION ==============
+
+exploreBtn.style.animation = "float 2s infinite ease-in-out";
+
 // Services cards animation + click light border
 (function(){
   const cards = document.querySelectorAll('.service-card');
