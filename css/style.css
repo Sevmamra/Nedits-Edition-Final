@@ -131,14 +131,12 @@ nav a:hover {
   overflow: hidden;
 }
 
-.hero-bg::after {
-  content: '';
+.hero-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
 
 .hero-title-img {
@@ -158,7 +156,7 @@ nav a:hover {
   transition: 0.3s;
   box-shadow: 0 4px 12px rgba(255, 0, 0, 0.4);
   display: inline-block;
-  margin: 50px auto 0 auto;
+  margin-top: 60px auto 0 auto;
 }
 
 .explore-btn:hover {
