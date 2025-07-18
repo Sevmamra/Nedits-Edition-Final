@@ -156,7 +156,7 @@ nav a:hover {
   transition: 0.3s;
   box-shadow: 0 4px 12px rgba(255, 0, 0, 0.4);
   display: inline-block;
-  margin-top: 60px auto 0 auto;
+  margin-top: 40px auto 0 auto;
 }
 
 .explore-btn:hover {
