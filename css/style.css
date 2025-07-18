@@ -131,7 +131,7 @@ nav a:hover {
   overflow: hidden;
 }
 
-.hero-overlay {
+.hero-bg::after {
   content: '';
   position: absolute;
   top: 0;
