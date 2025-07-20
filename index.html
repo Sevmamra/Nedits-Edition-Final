@@ -155,22 +155,37 @@
     }
     window.addEventListener('load', typeWriter);
 
-    // Hero Background Slideshow
+    // Hero Background Random Slideshow
     const heroSection = document.querySelector('.hero');
-    const images = [
-      'images/hero-bg1.jpg',
-      'images/hero-bg2.jpg',
-      'images/hero-bg3.jpg',
-      'images/hero-bg4.jpg'
-    ];
-    let currentIndex = 0;
+    const heroOverlay = document.querySelector('.hero-overlay');
+    const bgImages = [];
+    const totalImages = 3; // Change this to your number of images
 
-    function changeBackground() {
-      currentIndex = (currentIndex + 1) % images.length;
-      heroSection.style.backgroundImage = `url('${images[currentIndex]}')`;
+    for (let i = 1; i <= totalImages; i++) {
+      bgImages.push(`images/hero-bg/hero-bg${i}.jpg`);
     }
 
-    setInterval(changeBackground, 3000);
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
+
+    let currentSequence = [...bgImages];
+    shuffleArray(currentSequence);
+    let currentIndex = 0;
+
+    function changeHeroBg() {
+      heroSection.style.backgroundImage = `url('${currentSequence[currentIndex]}')`;
+      currentIndex++;
+      if (currentIndex >= currentSequence.length) {
+        shuffleArray(currentSequence);
+        currentIndex = 0;
+      }
+    }
+
+    setInterval(changeHeroBg, 3000);
   </script>
 
 </body>
