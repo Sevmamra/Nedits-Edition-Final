@@ -4,120 +4,147 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nedits Edition</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Montserrat', sans-serif;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: sans-serif;
       background-color: #ffffff;
     }
 
-    /* ===== TOP BANNER ===== */
+    /* ==== TOP BANNER ==== */
     .top-banner {
+      background: linear-gradient(to right, #ff0000, #ff66cc);
+      padding: 10px;
+      position: relative;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 10px;
-      background: linear-gradient(to right, #ff0000, #ff69b4);
-    }
-
-    .logo {
-      height: 60px;
-    }
-
-    .banner-text {
-      height: 60px;
-    }
-
-    /* ===== NAVIGATION ===== */
-    nav {
-      background-color: black;
-      display: flex;
       justify-content: center;
-      padding: 10px 0;
       flex-wrap: wrap;
     }
 
-    nav a {
+    .logo-container {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      margin-right: 10px;
+    }
+
+    .logo-bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      z-index: 1;
+    }
+
+    .logo-main {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      z-index: 2;
+    }
+
+    .nedits-logo {
+      height: 60px;
+      margin-left: 20px;
+    }
+
+    .tagline {
+      width: 100%;
+      text-align: center;
       color: white;
-      text-decoration: none;
-      padding: 10px 20px;
-      margin: 0 5px;
+      margin-top: 10px;
+      font-size: 16px;
       font-weight: bold;
-      letter-spacing: 1px;
+    }
+
+    /* ==== NAVIGATION ==== */
+    .nav {
+      display: flex;
+      justify-content: center;
+      background-color: #000;
+    }
+
+    .nav a {
+      color: white;
+      padding: 12px 20px;
+      display: inline-block;
+      font-weight: bold;
+      font-size: 16px;
+      text-decoration: none;
       border-right: 2px solid white;
     }
 
-    nav a:last-child {
+    .nav a:last-child {
       border-right: none;
     }
 
-    /* ===== HERO SECTION ===== */
+    /* ==== HERO SECTION ==== */
     .hero {
-      background-image: url('background.jpg');
+      background-image: url('hero-bg.jpg');
       background-size: cover;
       background-position: center;
       text-align: center;
-      color: #000;
-      padding: 100px 20px 50px;
+      padding: 50px 20px;
+      color: white;
     }
 
-    .hero h1 {
-      color: #0033cc;
-      font-size: 2.5em;
-      margin: 0;
-      text-shadow: 2px 2px 4px #00000044;
+    .welcome-img {
+      max-width: 90%;
+      height: auto;
+      margin-bottom: 20px;
     }
 
-    .hero h2 {
-      color: #8000c8;
-      font-size: 2.5em;
-      margin: 10px 0;
-      text-shadow: 2px 2px 4px #00000022;
-    }
-
-    .hero p {
-      font-size: 1.1em;
+    .hero-subtext {
+      font-size: 18px;
       font-weight: bold;
-      margin-top: 20px;
+      color: black;
       letter-spacing: 2px;
+      margin-bottom: 30px;
     }
 
-    /* ===== EXPLORE BUTTON ===== */
+    /* ==== EXPLORE BUTTON ==== */
     .explore-btn {
       background-color: red;
       color: white;
-      padding: 15px 30px;
+      padding: 15px 35px;
+      font-size: 18px;
       border: none;
       border-radius: 50px;
-      font-size: 1.2em;
       font-weight: bold;
-      box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.4);
       cursor: pointer;
-      margin-top: 40px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Top Banner -->
+  <!-- TOP BANNER -->
   <div class="top-banner">
-    <img src="logo.png" alt="Logo" class="logo">
-    <img src="banner-text.png" alt="Nedits Banner" class="banner-text">
+    <div class="logo-container">
+      <img src="20250721_190015.jpeg" alt="Logo Background" class="logo-bg">
+      <img src="nedits-logo.jpeg" alt="Logo" class="logo-main">
+    </div>
+    <img src="nedits-text-logo.jpeg" alt="Nedits Text" class="nedits-logo">
+    <div class="tagline">Your Creative Digital Partner</div>
   </div>
 
-  <!-- Navigation -->
-  <nav>
+  <!-- NAVIGATION BAR -->
+  <div class="nav">
     <a href="#">HOME</a>
     <a href="#">SERVICES</a>
     <a href="#">CONTACT</a>
-  </nav>
+  </div>
 
-  <!-- Hero Section -->
+  <!-- HERO SECTION -->
   <div class="hero">
-    <h1>Welcome to</h1>
-    <h2>Nedits Edition</h2>
-    <p>DESIGN | EDIT | DEVLOP | MANAGE</p>
+    <img src="20250721_190129.jpeg" alt="Welcome to Nedits Edition" class="welcome-img">
+    <div class="hero-subtext">DESIGN | EDIT | DEVLOP | MANAGE</div>
     <button class="explore-btn">Explore Services</button>
   </div>
 
