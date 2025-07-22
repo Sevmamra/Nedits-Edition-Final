@@ -2,151 +2,82 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nedits Edition</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: sans-serif;
-      background-color: #ffffff;
-    }
-
-    /* ==== TOP BANNER ==== */
-    .top-banner {
-      background: linear-gradient(to right, #ff0000, #ff66cc);
-      padding: 10px;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .logo-container {
-      position: relative;
-      width: 120px;
-      height: 120px;
-      margin-right: 10px;
-    }
-
-    .logo-bg {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      z-index: 1;
-    }
-
-    .logo-main {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      z-index: 2;
-    }
-
-    .nedits-logo {
-      height: 60px;
-      margin-left: 20px;
-    }
-
-    .tagline {
-      width: 100%;
-      text-align: center;
-      color: white;
-      margin-top: 10px;
-      font-size: 16px;
-      font-weight: bold;
-    }
-
-    /* ==== NAVIGATION ==== */
-    .nav {
-      display: flex;
-      justify-content: center;
-      background-color: #000;
-    }
-
-    .nav a {
-      color: white;
-      padding: 12px 20px;
-      display: inline-block;
-      font-weight: bold;
-      font-size: 16px;
-      text-decoration: none;
-      border-right: 2px solid white;
-    }
-
-    .nav a:last-child {
-      border-right: none;
-    }
-
-    /* ==== HERO SECTION ==== */
-    .hero {
-      background-image: url('hero-bg.jpg');
-      background-size: cover;
-      background-position: center;
-      text-align: center;
-      padding: 50px 20px;
-      color: white;
-    }
-
-    .welcome-img {
-      max-width: 90%;
-      height: auto;
-      margin-bottom: 20px;
-    }
-
-    .hero-subtext {
-      font-size: 18px;
-      font-weight: bold;
-      color: black;
-      letter-spacing: 2px;
-      margin-bottom: 30px;
-    }
-
-    /* ==== EXPLORE BUTTON ==== */
-    .explore-btn {
-      background-color: red;
-      color: white;
-      padding: 15px 35px;
-      font-size: 18px;
-      border: none;
-      border-radius: 50px;
-      font-weight: bold;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-      cursor: pointer;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nedits Edition - Your Creative Digital Partner</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- TOP BANNER -->
-  <div class="top-banner">
-    <div class="logo-container">
-      <img src="20250721_190015.jpeg" alt="Logo Background" class="logo-bg">
-      <img src="nedits-logo.jpeg" alt="Logo" class="logo-main">
+  <header>
+    <div class="container">
+      <h1 class="logo">Nedits Edition</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-    <img src="nedits-text-logo.jpeg" alt="Nedits Text" class="nedits-logo">
-    <div class="tagline">Your Creative Digital Partner</div>
-  </div>
+  </header>
 
-  <!-- NAVIGATION BAR -->
-  <div class="nav">
-    <a href="#">HOME</a>
-    <a href="#">SERVICES</a>
-    <a href="#">CONTACT</a>
-  </div>
+  <section id="home" class="hero">
+    <div class="container">
+      <h2>Welcome to Nedits Edition</h2>
+      <p>Your Creative Digital Partner</p>
+      <a href="#services" class="btn">Explore Services</a>
+    </div>
+  </section>
 
-  <!-- HERO SECTION -->
-  <div class="hero">
-    <img src="20250721_190129.jpeg" alt="Welcome to Nedits Edition" class="welcome-img">
-    <div class="hero-subtext">DESIGN | EDIT | DEVLOP | MANAGE</div>
-    <button class="explore-btn">Explore Services</button>
-  </div>
+  <section id="services" class="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <ul>
+        <li>🎨 Graphic Designing</li>
+        <li>📱 Social Media Posts</li>
+        <li>🖨️ Flyers, Posters, Brochures</li>
+        <li>🧑‍💻 Web & App UI Design</li>
+        <li>📦 Brand Identity Kits</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>We focus on creating eye-catching visuals and strong digital identities to help brands grow and stand out.</p>
+    </div>
+  </section>
+
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <h2>Testimonials</h2>
+      <blockquote>
+        <p>"Their designs elevated our brand. Extremely professional and creative!"</p>
+        <cite>— Happy Client</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" rows="5"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Nedits Edition. All rights reserved.</p>
+    </div>
+  </footer>
 
 </body>
 </html>
